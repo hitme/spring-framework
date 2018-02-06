@@ -1130,7 +1130,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 				autowiredBeanNames.add(autowiredBeanName);
 			}
 			if (instanceCandidate instanceof Class) {
-				instanceCandidate = descriptor.resolveCandidate(autowiredBeanName, type, this);
+				instanceCandidate = descriptor.resolveCandidate(autowiredBeanName, type, this);// tzl: get DI candidates
 			}
 			Object result = instanceCandidate;
 			if (result instanceof NullBean) {
