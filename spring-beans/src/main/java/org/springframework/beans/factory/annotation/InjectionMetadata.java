@@ -88,7 +88,7 @@ public class InjectionMetadata {
 				if (debug) {
 					logger.debug("Processing injected element of bean '" + beanName + "': " + element);
 				}
-				element.inject(target, beanName, pvs); // tzl: DI checkpoint?
+				element.inject(target, beanName, pvs); // [tzl]: DI checkpoint? no
 			}
 		}
 	}

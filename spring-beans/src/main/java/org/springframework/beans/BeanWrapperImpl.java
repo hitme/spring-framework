@@ -317,7 +317,7 @@ public class BeanWrapperImpl extends AbstractNestablePropertyAccessor implements
 		public void setValue(final @Nullable Object value) throws Exception {
 			final Method writeMethod = (this.pd instanceof GenericTypeAwarePropertyDescriptor ?
 					((GenericTypeAwarePropertyDescriptor) this.pd).getWriteMethodForActualAccess() :
-					this.pd.getWriteMethod());
+					this.pd.getWriteMethod()); // [tzl]: DI preferentially use property setter
 			if (System.getSecurityManager() != null) {
 				AccessController.doPrivileged((PrivilegedAction<Object>) () -> {
 					ReflectionUtils.makeAccessible(writeMethod);
@@ -333,7 +333,7 @@ public class BeanWrapperImpl extends AbstractNestablePropertyAccessor implements
 			}
 			else {
 				ReflectionUtils.makeAccessible(writeMethod);
-				writeMethod.invoke(getWrappedInstance(), value);
+				writeMethod.invoke(getWrappedInstance(), value); // [tzl]: DI boils down
 			}
 		}
 	}

@@ -76,7 +76,7 @@ public class PropertySourcesPropertyResolver extends AbstractPropertyResolver {
 
 	@Nullable
 	protected <T> T getProperty(String key, Class<T> targetValueType, boolean resolveNestedPlaceholders) {
-		if (this.propertySources != null) { // tzl: properties resovled
+		if (this.propertySources != null) { // [tzl]: properties resovled
 			for (PropertySource<?> propertySource : this.propertySources) {
 				if (logger.isTraceEnabled()) {
 					logger.trace("Searching for key '" + key + "' in PropertySource '" +

@@ -688,7 +688,7 @@ public class PathMatchingResourcePatternResolver implements ResourcePatternResol
 	 */
 	protected Set<Resource> doFindPathMatchingFileResources(Resource rootDirResource, String subPattern)
 			throws IOException {
-		// tzl: resource finding boils down to this.
+		// [tzl]: resource finding boils down to this.
 		File rootDir;
 		try {
 			rootDir = rootDirResource.getFile().getAbsoluteFile();
