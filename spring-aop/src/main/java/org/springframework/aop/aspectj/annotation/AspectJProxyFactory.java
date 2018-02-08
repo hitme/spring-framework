@@ -150,7 +150,7 @@ public class AspectJProxyFactory extends ProxyCreatorSupport {
 		if (am.getAjType().getPerClause().getKind() == PerClauseKind.SINGLETON) {
 			// Create a shared aspect instance.
 			Object instance = getSingletonAspectInstance(aspectClass);
-			instanceFactory = new SingletonMetadataAwareAspectInstanceFactory(instance, aspectName);
+			instanceFactory = new SingletonMetadataAwareAspectInstanceFactory(instance, aspectName);// [tzl]: aspect initialization strategy
 		}
 		else {
 			// Create a factory for independent aspect instances.

@@ -40,7 +40,7 @@ import org.springframework.util.Assert;
  *
  * <p>Processing of Spring Advisors follows the rules established in
  * {@link org.springframework.aop.framework.autoproxy.AbstractAdvisorAutoProxyCreator}.
- *
+ * [tzl]: auto process org.aspectj.lang annotations
  * @author Rod Johnson
  * @author Juergen Hoeller
  * @since 2.0

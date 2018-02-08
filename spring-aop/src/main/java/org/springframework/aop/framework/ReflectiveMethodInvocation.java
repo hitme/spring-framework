@@ -176,7 +176,7 @@ public class ReflectiveMethodInvocation implements ProxyMethodInvocation, Clonea
 			else {
 				// Dynamic matching failed.
 				// Skip this interceptor and invoke the next in the chain.
-				return proceed();
+				return proceed();// [tzl]: responsibility chain pattern
 			}
 		}
 		else {

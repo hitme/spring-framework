@@ -23,7 +23,7 @@ import org.springframework.aop.Pointcut;
 
 /**
  * Convenient class for name-match method pointcuts that hold an Advice,
- * making them an Advisor.
+ * making them an Advisor. [tzl]: aop way of doing aop advice
  *
  * @author Juergen Hoeller
  * @author Rob Harrop
