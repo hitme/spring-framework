@@ -215,7 +215,7 @@ class ConfigurationClassParser {
 
 	protected void processConfigurationClass(ConfigurationClass configClass) throws IOException {
 		if (this.conditionEvaluator.shouldSkip(configClass.getMetadata(), ConfigurationPhase.PARSE_CONFIGURATION)) {
-			return;
+			return;// [tzl]: conditional configuration
 		}
 
 		ConfigurationClass existingClass = this.configurationClasses.get(configClass);

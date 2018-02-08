@@ -109,7 +109,7 @@ public abstract class ConcurrencyThrottleSupport implements Serializable {
 		}
 		if (this.concurrencyLimit > 0) {
 			boolean debug = logger.isDebugEnabled();
-			synchronized (this.monitor) {
+			synchronized (this.monitor) { // [tzl]: #example monitor usage
 				boolean interrupted = false;
 				while (this.concurrencyCount >= this.concurrencyLimit) {
 					if (interrupted) {

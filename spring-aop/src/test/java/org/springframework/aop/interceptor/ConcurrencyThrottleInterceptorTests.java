@@ -62,7 +62,7 @@ public class ConcurrencyThrottleInterceptorTests {
 		serializedProxy.getAge();
 	}
 
-	@Test
+	@Test // [tzl]: running good
 	public void testMultipleThreadsWithLimit1() {
 		testMultipleThreads(1);
 	}

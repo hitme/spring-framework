@@ -106,7 +106,7 @@ class ConditionEvaluator {
 				requiredPhase = ((ConfigurationCondition) condition).getConfigurationPhase();
 			}
 			if (requiredPhase == null || requiredPhase == phase) {
-				if (!condition.matches(this.context, metadata)) {
+				if (!condition.matches(this.context, metadata)) { // [tzl]: springboot hook point
 					return true;
 				}
 			}
