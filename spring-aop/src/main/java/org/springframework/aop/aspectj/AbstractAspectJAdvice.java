@@ -550,7 +550,7 @@ public abstract class AbstractAspectJAdvice implements Advice, AspectJPrecedence
 
 	/**
 	 * Take the arguments at the method execution join point and output a set of arguments
-	 * to the advice method
+	 * to the advice method [tzl]: aop advice parameter binding site
 	 * @param jp the current JoinPoint
 	 * @param jpMatch the join point match that matched this execution join point
 	 * @param returnValue the return value from the method execution (may be null)
@@ -629,7 +629,7 @@ public abstract class AbstractAspectJAdvice implements Advice, AspectJPrecedence
 	protected Object invokeAdviceMethod(JoinPoint jp, @Nullable JoinPointMatch jpMatch,
 			@Nullable Object returnValue, @Nullable Throwable t) throws Throwable {
 
-		return invokeAdviceMethodWithGivenArgs(argBinding(jp, jpMatch, returnValue, t));
+		return invokeAdviceMethodWithGivenArgs(argBinding(jp, jpMatch, returnValue, t)); // [tzl]: JoinPoint injection site
 	}
 
 	protected Object invokeAdviceMethodWithGivenArgs(Object[] args) throws Throwable {
